@@ -1,6 +1,8 @@
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 #include "httplib.h"
 
+void log(std::ostream& os);
+
 int main() {
     std::ifstream is("config.txt");
     if (!is.is_open()) {
@@ -21,9 +23,11 @@ int main() {
         {"new", "+++New+Puzzle+++"},
         {"size", std::to_string(size)},
     };
+    log(std::cerr);
     auto resp = cli.Post("/", headers, params);
     if (resp->status == 200) {
         std::cerr << "[LOG] successed to get the puzzle." << std::endl;
+        log(std::cerr);
         std::string prefix = "var task = '";
         std::string postfix = "'; var loadedId = 0;";
         auto begin = resp->body.find(prefix) + prefix.length();

@@ -34,7 +34,7 @@ checksum = "561d97a539a36e26a9a5fad1ea11a3039a67714694aaa379433e580854bc3dc5"
 [[package]]
 name = "nonogram"
 version = "0.1.0"
-source = "git+https://github.com/Nervonment/nonogram.git#7423a0183211841c42e8f541c5660cf17721cefd"
+source = "git+https://github.com/Nervonment/nonogram.git#cc9b969791f0cb521125d0378a6b100c982c00b7"
 dependencies = [
  "rand",
 ]
