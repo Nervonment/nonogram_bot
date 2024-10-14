@@ -19,4 +19,4 @@ jobs:
     - name: Build
       run: ./build.sh
     - name: Run
-      run: ./run.sh
+      run: time ./run.sh
